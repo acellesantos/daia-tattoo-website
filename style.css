@@ -492,15 +492,20 @@ h1, h2 { font-family: 'Bebas Neue', cursive; letter-spacing: 3px; }
 
 .lightbox {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0;
     background: rgba(0, 0, 0, 0.9);
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
     z-index: 99999;
+}
+
+.lightbox.active {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .lightbox-img {
@@ -510,6 +515,8 @@ h1, h2 { font-family: 'Bebas Neue', cursive; letter-spacing: 3px; }
     width: auto;
     height: auto;
     object-fit: contain;
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
 }
 
 .lightbox-close {
@@ -521,3 +528,36 @@ h1, h2 { font-family: 'Bebas Neue', cursive; letter-spacing: 3px; }
     cursor: pointer;
 }
 
+.lightbox.active .lightbox-img {
+    transform: scale(1);
+}
+
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transform: translateY(-50%);
+    padding: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 100000;
+}
+
+.lightbox-nav.prev {
+    left: 30px;
+}
+
+.lightbox-nav.next {
+    right: 30px;
+}
+
+.lightbox-nav:hover {
+    color: var(--orange);
+}
+
+.lightbox:hover .lightbox-nav {
+    opacity: 1;
+}
