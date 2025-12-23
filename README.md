@@ -81,12 +81,7 @@ Algumas melhorias que podem ser exploradas futuramente para evoluir a experiênc
 
 <p align="center">
   Desenvolvido com ☕ e 🐍 por <strong>Marcelle Santos</strong><br>
-  Projeto fictício criado para fins de estudo e portfólio.
+  <span style="opacity:0.6; font-size:0.75em;">
+    Projeto fictício criado para fins de estudo e portfólio.
+  </span>
 </p>
-
----
-
-🔗 GitHub: https://github.com/acellesantos  
-🔗 LinkedIn: https://www.linkedin.com/in/amarcellesantos/
-
----
