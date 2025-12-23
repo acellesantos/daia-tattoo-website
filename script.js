@@ -40,17 +40,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function showImage(index) {
-        if (index < 0) {
-            currentImageIndex = galleryItems.length - 1;
-        } else if (index >= galleryItems.length) {
-            currentImageIndex = 0;
-        } else {
-            currentImageIndex = index;
-        }
+        lightboxImg.classList.add('fade-out');
 
-        const img = galleryItems[currentImageIndex].querySelector('img');
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
+        setTimeout(() => {
+
+            if (index < 0) {
+                currentImageIndex = galleryItems.length - 1;
+            } else if (index >= galleryItems.length) {
+                currentImageIndex = 0;
+            } else {
+                currentImageIndex = index;
+            }
+
+            const img = galleryItems[currentImageIndex].querySelector('img');
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+
+            lightboxImg.classList.remove('fade-out');
+        }, 200);
     }
 
     // Setas (mouse)

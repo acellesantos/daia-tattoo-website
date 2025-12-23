@@ -515,8 +515,15 @@ h1, h2 { font-family: 'Bebas Neue', cursive; letter-spacing: 3px; }
     width: auto;
     height: auto;
     object-fit: contain;
+
+    opacity: 1;
     transform: scale(0.95);
-    transition: transform 0.3s ease;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.lightbox-img.fade-out {
+    opacity: 0;
+    transform: scale(0.97);
 }
 
 .lightbox-close {
