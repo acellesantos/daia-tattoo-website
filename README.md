@@ -39,6 +39,7 @@ O objetivo do projeto foi explorar **UI/UX**, animações sutis e interações m
 
 ## 📁 Estrutura do projeto
 
+```
 daia-tattoo-website/
 │
 ├── index.html
@@ -49,7 +50,7 @@ daia-tattoo-website/
 │ ├── tattoo1.jpg
 │ └── ...
 └── README.md
-
+```
 
 ---
 
