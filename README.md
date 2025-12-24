@@ -68,17 +68,6 @@ Este projeto foi desenvolvido com foco em:
 
 ---
 
-## 🚀 Possíveis evoluções
-
-Algumas melhorias que podem ser exploradas futuramente para evoluir a experiência e performance do projeto:
-
-- Swipe no mobile para o lightbox
-- Lazy loading de imagens
-- Animações de entrada por scroll
-- Acessibilidade (ARIA / foco de teclado)
-
----
-
 <p align="center">
   Desenvolvido com ☕ e 🐍 por <strong>Marcelle Santos</strong><br>
   <span style="opacity:0.6; font-size:0.75em;">
