@@ -1,0 +1,16 @@
+name: Check do Site da Daia
+
+on: [push, pull_request]
+
+jobs:
+  verificacao:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Validar HTML
+        uses: htmlhint/htmlhint-action@v2
+        with:
+          pattern: '**/*.html'
